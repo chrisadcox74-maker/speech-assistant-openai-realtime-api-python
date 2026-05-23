@@ -66,7 +66,7 @@ async def handle_media_stream(websocket: WebSocket):
     await websocket.accept()
 
     async with websockets.connect(
-        f"wss://api.openai.com/v1/realtime?model=gpt-4o-mini-realtime-preview&temperature={TEMPERATURE}",
+        f"wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview&temperature={TEMPERATURE}",
         additional_headers={
             "Authorization": f"Bearer {OPENAI_API_KEY}"
         }
